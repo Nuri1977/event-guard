@@ -1,0 +1,25 @@
+<nav class="flex px-8 bg-gray-100 justify-between">
+
+  <div class="flex items-center space-x-3">
+      <%= link_to root_path do %>
+        <%= image_tag("events-logo.png") %>
+      <% end %>
+  </div>
+    <button class="py-1 px-2 text-md leading-normal bg-transparent border border-transparent rounded" type="button" data-bs-toggle="flex-growlapse" data-bs-target="#relative flex flex-wrap items-center content-between py-2 px-4NavAltup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="flex items-center space-x-3">
+
+    <%= link_to t('.events'), events_path ,class: "block p-1 text-gray-600 hover:text-gray-800" %>
+    <%= link_to t('.about'), about_path, class: "block p-1 text-gray-600 hover:text-gray-800" %>
+    <%= link_to t('.contact'), contact_path, class: "block p-1 text-gray-600 hover:text-gray-800" %>
+    <% if user_signed_in? %>
+      <%= link_to t('.dashboard'), dashboard_root_path ,class: "block p-1 text-gray-600 hover:text-gray-800" %>
+      <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class:"block my-3 py-1.5 px-3 bg-blue-700 hover:bg-blue-600 text-white hover:text-blue-800 rounded transition duration-300", role: "button" %>
+    <% else%>
+      <%= link_to t('.log_in'), new_user_session_path , class:"block my-3 py-1.5 px-3 bg-gray-500 hover:bg-gray-400 text-white hover:text-yellow-800 rounded transition duration-300", role: "button" %>
+      <%= link_to t('.sign_up'), new_user_registration_path, class:"block my-3 py-1.5 px-3 bg-blue-700 hover:bg-blue-600 text-white hover:text-blue-800 rounded transition duration-300", role: "button" %>
+    <%end%>
+  </div>
+</nav>
+

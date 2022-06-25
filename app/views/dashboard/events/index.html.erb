@@ -1,0 +1,44 @@
+<div class="container mx-auto">
+  <h1 class="text-3xl font-bold text-center">A collection of all your Events</h1>
+  <p class="text-gray-600 text-lg font-medium my-4">Enables you space to keep track of all your events. You can delete,
+    edit and read them.</p>
+</div>
+
+<!-- component -->
+<div class="container mx-auto mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+  <% @events.each do |event| %>
+  <div>
+    <div class="rounded-lg overflow-hidden">
+      <div class="relative overflow-hidden pb-60">
+          <%= image_tag 'note.jpg', title: "Event img", class: "absolute h-full w-full object-cover object-center" %>
+      </div>
+      <div class="relative bg-blue-200">
+        <div class="py-10 px-8">
+          <h3 class="text-2xl font-bold"><%= event.title %></h3>
+          <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
+            <p><%= event.subtitle %></p>
+          </div>
+          <p class="leading-7">
+            <%= event.description %>
+          </p>
+          <div class="mt-10 flex justify-between items-center">
+            <div>
+              <img src="https://collect.criggzdesign.com/wp-content/uploads/2020/07/Ps.svg" alt="" class="w-6" />
+            </div>
+            <%= link_to(event, class:"flex items-center") do%>
+              <p class="mr-4">Read more</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14.125" height="13.358" viewBox="0 0 14.125 13.358">
+                <g transform="translate(-3 -3.293)">
+                  <path id="Path_7" data-name="Path 7"
+                    d="M14.189,10.739H3V9.2H14.189L9.361,4.378l1.085-1.085,6.679,6.679-6.679,6.679L9.361,15.566Z"
+                    fill="#1d1d1d" fill-rule="evenodd"></path>
+                </g>
+              </svg>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

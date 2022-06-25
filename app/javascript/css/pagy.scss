@@ -1,0 +1,44 @@
+.pagy-nav {
+  @apply mx-auto flex space-x-2 justify-center bg-gray-800 h-40 items-center;
+}
+
+.pagy-nav .page a {
+  @apply items-center hidden px-4 py-2 mx-1 text-gray-700 transition-colors duration-200 transform bg-white rounded-md;
+
+  @screen sm {
+    @apply flex;
+  }
+
+
+  &:hover {
+    @apply text-white bg-blue-600;
+  }
+
+  @variants dark {
+    @apply bg-gray-200 text-gray-900;
+
+    &:hover {
+      @apply bg-blue-500 text-gray-200;
+    }
+  }
+
+}
+
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled {
+  @apply flex items-center px-4 py-2 mx-1 text-gray-500 bg-white rounded-md cursor-not-allowed;
+
+@variants dark {
+ @apply bg-gray-200 text-gray-900;
+}
+}
+
+.pagy-nav .page.active {
+  @apply px-3 py-2 mx-1 font-medium bg-blue-500 text-white rounded-md;
+
+  &:hover {
+    @apply bg-indigo-500 text-white;
+  }
+}
+
+

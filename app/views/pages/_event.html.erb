@@ -1,0 +1,30 @@
+<div class="flex">
+    <div class="pt-1 mr-6 text-center">
+         <div class="px-2 pb-1 mb-1 border-b border-gray-400">
+            <p class="text-sm text-gray-200"><%= event.event_start_date.strftime("%b")%></p>
+         </div>
+        <div class="px-2">
+             <p class="text-lg font-bold text-gray-200"><%= event.event_start_date.strftime("%d")%></p>
+        </div>
+            </div>
+        <div>
+            <div class="mb-2">
+                <%= link_to event.subtitle, event_path(event), class:"text-xs font-semibold tracking-wide uppercase transition-colors duration-200 text-blue-800 hover:text-deep-purple-800 ", 'aria-label':"Category", 'title':"Development"%>
+            </div>
+            <div class="mb-2">
+                <%= link_to event.title, event_path(event), 'aria-label':"Article", class:"inline-block text-2xl font-bold leading-5 text-white transition-colors duration-200 hover:text-deep-purple-accent-400"%>
+            </div>
+            <p class="mb-5 text-gray-500 content-color-homepage">
+                <%= event.description%>
+            </p>
+            <div class="flex items-center">
+                <%= link_to event_path(event), 'aria-label':"Author", 'title':"Author", class:"mr-3" do %>
+                    <%= image_tag "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260", alt:"avatar", class:"object-cover w-10 h-10 rounded-full shadow-sm" %>
+                <% end %>
+            <div>
+                <%= link_to event.title, event_path(event), class:"font-semibold text-white transition-colors duration-200 hover:text-deep-purple-accent-400", 'aria-label':"Author", 'title':"Author"%>
+                    <p class="text-sm font-medium leading-4 text-gray-600 content-color-homepage">Author</p>
+            </div>
+        </div>
+    </div>
+</div>

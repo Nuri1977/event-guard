@@ -1,0 +1,77 @@
+<section class="relative mx-auto bg-gray-800 px-4">
+  <div class="relative -mx-4 top-0 pt-[17%] overflow-hidden">
+    <%= image_tag 'show-event-img.png', class: "absolute inset-0 object-cover object-top w-full h-full filter blur" %>
+  </div>
+
+  <div class="mt-[-10%] w-1/2 mx-auto">
+    <div class="relative pt-[56.25%] overflow-hidden rounded-2xl">
+      <%= image_tag 'show-event-img.png', class: "w-full h-full absolute inset-0 object-cover" %>
+    </div>
+  </div>
+
+  <article class="max-w-prose mx-auto py-8 text-white">
+    <h2 class="my-2 text-sm "><%=@event.event_start_date %> - <%=@event.event_end_date %></h2>
+    <h1 class="text-2xl font-bold"> <%=@event.title %> </h1>
+    <h2 class="mt-2 text-sm "><%=@event.subtitle %></h2>
+    <p class="mt-6"><%=@event.description %></p>
+  </article>
+</section>
+<div class="bg-gray-800">
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+  <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-3xl md:mx-auto">
+      <span class="relative inline-block">
+        <span class="relative">Checkout </span>
+      </span>
+      some more related Events
+    </h2>
+    <p class="text-base text-gray-500 md:text-lg">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+    </p>
+  </div>
+  <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
+    <div class="sm:text-center">
+      <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-700 sm:mx-auto sm:w-24 sm:h-24">
+        <svg class="w-12 h-12 text-blue-400 sm:w-20 sm:h-20" stroke="currentColor" viewBox="0 0 52 52">
+          <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+        </svg>
+      </div>
+      <h6 class="mb-2 font-semibold leading-5 text-white">The good cheese</h6>
+      <p class="max-w-md mb-3 text-sm text-gray-500 sm:mx-auto">
+        Cheese on toast airedale the big cheese. Danish fontina cheesy grin airedale danish
+      </p>
+      <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-blue-400 hover:text-deep-purple-800">Learn more</a>
+    </div>
+    <div class="sm:text-center">
+      <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-700 sm:mx-auto sm:w-24 sm:h-24">
+        <svg class="w-12 h-12 text-blue-400 sm:w-20 sm:h-20" stroke="currentColor" viewBox="0 0 52 52">
+          <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+        </svg>
+      </div>
+      <h6 class="mb-2 font-semibold leading-5 text-white">Chainsaw foal hay</h6>
+      <p class="max-w-md mb-3 text-sm text-gray-500 sm:mx-auto">
+        Satoshi Nakamoto launched lots of decentralisation when Litecoin required
+      </p>
+      <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-blue-400 hover:text-deep-purple-800">Learn more</a>
+    </div>
+    <div class="sm:text-center">
+      <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-700 sm:mx-auto sm:w-24 sm:h-24">
+        <svg class="w-12 h-12 text-blue-400 sm:w-20 sm:h-20" stroke="currentColor" viewBox="0 0 52 52">
+          <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+        </svg>
+      </div>
+      <h6 class="mb-2 font-semibold leading-5 text-white">Pick up truck</h6>
+      <p class="max-w-md mb-3 text-sm text-gray-500 sm:mx-auto">
+        Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt i mechad
+      </p>
+      <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-blue-400 hover:text-deep-purple-800">Learn more</a>
+    </div>
+  </div>
+  </div>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-10 lg:px-8 lg:py-10 ">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <%= link_to "Back",events_path, class:"bg-blue-400 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"%>
+      </div>
+    </div>
+  </div>
+</div>

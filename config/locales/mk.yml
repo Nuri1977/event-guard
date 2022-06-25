@@ -1,0 +1,10 @@
+mk:
+  layouts:
+    navbar:
+      events: 'Настани'
+      about: 'За'
+      contact: 'Контакт'
+      dashboard: 'Табла'
+      log_out: 'Одјави се'
+      log_in: 'Најави се'
+      sign_up: 'Регистрирај се'

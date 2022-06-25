@@ -1,0 +1,10 @@
+en:
+  layouts:
+    navbar:
+      events: 'Events'
+      about: 'About'
+      contact: 'Contact'
+      dashboard: 'Dashboard'
+      log_out: 'Logout'
+      log_in: 'Login'
+      sign_up: 'Sign Up'

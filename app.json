@@ -1,0 +1,26 @@
+{
+  "name": "eventguard-staging",
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "environments": {
+    "test": {
+      "env": { }
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:schema:load db:seed",
+    "test-setup": "bin/rails assets:precompile",
+    "test": "bundle exec rspec && bundle exec rubocop ."
+  }
+}
